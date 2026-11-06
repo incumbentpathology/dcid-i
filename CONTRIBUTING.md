@@ -8,7 +8,7 @@ Record every patient by category: “an issue-tracker incumbent,” “a documen
 
 ## 2. Reporting a case
 
-A case report follows the form of a clinical case report: patient information, presenting complaint, history, timeline, mental status examination, diagnostic assessment against the criteria, intervention, outcome and discussion. Copy [`cases/_template.md`](cases/_template.md); [`cases/2026-11-six-weeks-of-cash.md`](cases/2026-11-six-weeks-of-cash.md) is a completed example.
+A case report follows the form of a clinical case report: patient information, presenting complaint, history, timeline, mental status examination, diagnostic assessment against the criteria, intervention, outcome and discussion. Copy [`cases/_template.md`](cases/_template.md); [`cases/2026-11-the-development-environment.md`](cases/2026-11-the-development-environment.md) is a completed example.
 
 Every finding code you assign must name the criteria it meets and the evidence for each. Mark the doctor’s interpretation as an inference. If you cannot complete a pull request, the *Report a case* issue form collects the same sections.
 
