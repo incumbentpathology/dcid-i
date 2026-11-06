@@ -11,20 +11,6 @@ physician: <your handle>
 
 **Findings:** R67.x · <Condition>, <specifiers>
 
-## Contents
-
-1. [Patient Information](#1-patient-information)
-2. [Presenting Complaint](#2-presenting-complaint)
-3. [History of Present Illness](#3-history-of-present-illness)
-4. [Past History](#4-past-history)
-5. [Timeline](#5-timeline)
-6. [Mental Status Examination](#6-mental-status-examination)
-7. [Diagnostic Assessment](#7-diagnostic-assessment)
-8. [Intervention](#8-intervention)
-9. [Follow-up and Outcomes](#9-follow-up-and-outcomes)
-10. [Discussion](#10-discussion)
-11. [Sources](#11-sources)
-
 ## 1. Patient Information
 
 Record the patient by type, never by name. Use bands, not exact figures.
