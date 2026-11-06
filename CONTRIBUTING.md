@@ -8,19 +8,13 @@ Record every patient by category: “an issue-tracker incumbent,” “a documen
 
 ## 2. Reporting a case
 
-A case cites one or more finding codes. Record:
+A case report follows the form of a clinical case report: patient information, presenting complaint, history, timeline, mental status examination, diagnostic assessment against the criteria, intervention, outcome and discussion. Copy [`cases/_template.md`](cases/_template.md); [`cases/2026-11-six-weeks-of-cash.md`](cases/2026-11-six-weeks-of-cash.md) is a completed example.
 
-- **Date.** When the sign was observed, to the month.
-- **Patient.** The type, per §1.
-- **Findings.** The codes, e.g. `R67.1, R67.4`.
-- **Observed.** What the patient said or did, paraphrased.
-- **Inference.** The doctor’s interpretation, marked as such.
-
-Use [`cases/_template.md`](cases/_template.md), or the *Report a case* issue form.
+Every finding code you assign must name the criteria it meets and the evidence for each. Mark the doctor’s interpretation as an inference. If you cannot complete a pull request, the *Report a case* issue form collects the same sections.
 
 ## 3. Proposing a condition
 
-A condition needs a name, a sign or working definition, and at least one case note. Open a *Propose a condition* issue. The editors assign codes in R67; please do not pick your own outside `.8` (see the README on forks).
+A condition follows the structure of the existing entries: diagnostic criteria, specifiers, recording procedures, diagnostic and associated features, prevalence, development and course, risk and prognostic factors, differential diagnosis and comorbidity. A proposal needs at least the criteria, the differential diagnosis and one case. Open a *Propose a condition* issue. The editors assign codes in R67; please do not pick your own outside `.8` (see the README on forks).
 
 ## 4. Register
 

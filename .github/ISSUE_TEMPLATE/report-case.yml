@@ -1,39 +1,68 @@
 name: Report a case
-description: Record an observed sign in an incumbent patient.
+description: Submit a case report on an incumbent patient.
 title: "Case: "
 labels: [case]
 body:
   - type: markdown
     attributes:
-      value: "Record the patient by type, never by name. Submissions that name a company will be closed."
-  - type: input
-    id: patient
-    attributes:
-      label: Patient
-      placeholder: "an issue-tracker incumbent"
-    validations:
-      required: true
+      value: "Record the patient by type, never by name. Paraphrase; do not quote exactly enough to identify the author. Submissions that name a company will be closed. The full template is in cases/_template.md."
   - type: input
     id: findings
     attributes:
-      label: Finding codes
-      placeholder: "R67.1, R67.4"
-    validations:
-      required: true
-  - type: input
-    id: date
-    attributes:
-      label: Date observed
-      placeholder: "2026-11"
-  - type: textarea
-    id: observed
-    attributes:
-      label: Observed
-      description: What the patient said or did, paraphrased.
+      label: Findings
+      description: Codes and specifiers.
+      placeholder: "R67.3 Hail Mary, commercial type, runway 6 weeks"
     validations:
       required: true
   - type: textarea
-    id: inference
+    id: patient
     attributes:
-      label: Inference
-      description: The doctor’s interpretation.
+      label: Patient information
+      description: Category, age band, size band, ownership, presenting through.
+      placeholder: "A workflow-software incumbent; 10–20 years; 500–5,000; venture-backed; presenting through an earnings call."
+    validations:
+      required: true
+  - type: textarea
+    id: complaint
+    attributes:
+      label: Presenting complaint
+      description: What the patient said or did that brought it to attention.
+    validations:
+      required: true
+  - type: textarea
+    id: history
+    attributes:
+      label: History
+      description: History of present illness, and past history (prior pivots, rebrands, acquisitions, prior episodes).
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Timeline
+      description: Dated events with sources.
+  - type: textarea
+    id: mse
+    attributes:
+      label: Mental status examination
+      description: Appearance, behavior, speech, mood, affect, thought process, thought content, orientation, insight, judgment.
+  - type: textarea
+    id: assessment
+    attributes:
+      label: Diagnostic assessment
+      description: Criteria met for each finding, with the evidence for each. Differential diagnoses considered and excluded.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Intervention and outcome
+      description: What the patient did, what the clinician would prescribe, and what happened next.
+  - type: textarea
+    id: discussion
+    attributes:
+      label: Discussion
+      description: The doctor's interpretation, marked as an inference.
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Public sources consulted.

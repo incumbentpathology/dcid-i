@@ -13,8 +13,27 @@ body:
   - type: textarea
     id: sign
     attributes:
-      label: Sign or working definition
+      label: Essential feature
       description: One plain sentence.
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Diagnostic criteria
+      description: Lettered criteria (A, B, C...), with numbered signs where a threshold applies ("three or more of the following").
+    validations:
+      required: true
+  - type: textarea
+    id: specifiers
+    attributes:
+      label: Specifiers
+      description: Severity, type, insight, course.
+  - type: textarea
+    id: differential
+    attributes:
+      label: Differential diagnosis
+      description: Conditions and ordinary business behavior this could be mistaken for, and how to tell them apart.
     validations:
       required: true
   - type: textarea

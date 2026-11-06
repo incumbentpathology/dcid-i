@@ -25,13 +25,13 @@ R67 · Signs of incumbent distress.
 | [R67.3](conditions/R67.3-hail-mary.md) | Hail Mary |
 | [R67.4](conditions/R67.4-delirium.md) | Delirium |
 
-Each condition has its own file in [`conditions/`](conditions/) and its own card in [`cards/`](cards/).
+Each entry gives diagnostic criteria, specifiers, recording procedures, features, prevalence, course, risk factors, differential diagnosis and comorbidity. Each condition has its own file in [`conditions/`](conditions/) and its own card in [`cards/`](cards/).
 
 ## 2. Cases
 
 A case cites one or more finding codes. Record the date, the words or actions observed, and the source. Mark the doctor’s interpretation as an inference.
 
-Patients are recorded by type, never by name: “a document-system founder,” not the company. See [`cases/`](cases/).
+Case reports follow the form of a clinical case report, including a mental status examination of the patient. Patients are recorded by type, never by name: “a document-system founder,” not the company. See [`cases/`](cases/) for the template and a completed example.
 
 ## 3. Contributing
 
