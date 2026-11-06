@@ -4,7 +4,7 @@
 
 ![Pathologies of Incumbency](cards/dsm-i.png)
 
-A clinical reference for the signs of distress in an incumbent company. All findings are fictional. Any resemblance to a company you have been watching is a matter for your own judgment.
+A clinical reference for the signs of incumbent distress. Any resemblance to a company you have been watching is a matter for your own judgment.
 
 ## Contents
 
@@ -16,7 +16,7 @@ A clinical reference for the signs of distress in an incumbent company. All find
 
 ## 1. Classification
 
-R67 · Signs of distress in an incumbent.
+R67 · Signs of incumbent distress.
 
 | Code | Condition |
 |---|---|
