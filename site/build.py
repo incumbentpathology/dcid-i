@@ -128,7 +128,7 @@ def page(title, body, path, conditions, here=None, description=DESCRIPTION, imag
 <meta name="twitter:title" content="{html.escape(full)}">
 <meta name="twitter:description" content="{html.escape(description)}">
 <meta name="twitter:image" content="{DOMAIN}{image}">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='34' fill='none' stroke='%231F1E1D' stroke-width='5'/><circle cx='50' cy='50' r='6' fill='%231F1E1D'/></svg>">
+<link rel="icon" href="/seal-600.png"><link rel="apple-touch-icon" href="/seal-600.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{FONTS}">
 <link rel="stylesheet" href="/style.css">
@@ -167,7 +167,7 @@ def build():
     if OUT.exists():
         shutil.rmtree(OUT)
     OUT.mkdir()
-    for f in ("style.css", "art.js"):
+    for f in ("style.css", "art.js", "seal.png", "seal-600.png"):
         shutil.copy(SITE / f, OUT / f)
     shutil.copytree(ROOT / "cards", OUT / "cards")
     (OUT / "CNAME").write_text("incumbentpathology.org\n")
@@ -193,7 +193,7 @@ def build():
   <h1 class="spaced">Pathologies<br>of<br>Incumbency</h1>
   <p class="subtitle">{SUBTITLE}</p>
   <canvas class="art" data-art="copium" aria-hidden="true"></canvas>
-  <p class="credits">{INSTITUTE}<br>First Edition · For clinical use</p>
+  <p class="credits"><img class="seal" src="/seal.png" alt="Seal of the {INSTITUTE}"><br>{INSTITUTE}<br>First Edition · For clinical use</p>
 </section>
 <section class="contents">
   <p class="category"><span class="mono">{CATEGORY[0]}</span>{CATEGORY[1]}</p>

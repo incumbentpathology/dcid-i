@@ -109,3 +109,4 @@ main { max-width: 700px; margin: 0 auto; padding: 96px 28px 64px; }
   .spaced { letter-spacing: 0.28em; margin-right: -0.28em; }
   .art { width: 220px; height: 220px; }
 }
+.seal { width: 96px; height: 96px; margin-bottom: 14px; }
