@@ -12,9 +12,9 @@ A case report follows the form of a clinical case report: patient information, p
 
 Every finding code you assign must name the criteria it meets and the evidence for each. Mark the doctor’s interpretation as an inference. If you cannot complete a pull request, the *Report a case* issue form collects the same sections.
 
-## 3. Proposing a condition
+## 3. Proposing a disorder
 
-A condition follows the structure of the existing entries: diagnostic criteria, specifiers, recording procedures, diagnostic and associated features, prevalence, development and course, risk and prognostic factors, differential diagnosis and comorbidity. A proposal needs at least the criteria, the differential diagnosis and one case. Open a *Propose a condition* issue. The editors assign codes in F67; please do not pick your own outside `.8` (see the README on forks).
+A disorder follows the structure of the existing entries: diagnostic criteria, specifiers, recording procedures, diagnostic and associated features, prevalence, development and course, risk and prognostic factors, differential diagnosis and comorbidity. A proposal needs at least the criteria, the differential diagnosis and one case. Open a *Propose a disorder* issue. The editors assign codes in F67; please do not pick your own outside `.8` (see the README on forks).
 
 ## 4. Register
 

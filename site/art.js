@@ -1,4 +1,4 @@
-// One quiet line-art study per condition. Each <canvas class="art" data-art="..."> runs its own loop.
+// One quiet line-art study per disorder. Each <canvas class="art" data-art="..."> runs its own loop.
 (function () {
   const INK = "rgba(31, 30, 29, 0.85)";
   const FAINT = "rgba(31, 30, 29, 0.35)";

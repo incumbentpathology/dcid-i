@@ -12,14 +12,14 @@ Consult the manual at [incumbentpathology.org](https://incumbentpathology.org).
 
 F67 · Early signs of incumbent distress.
 
-| Code | Condition | Common name |
+| Code | Disorder | Common name |
 |---|---|---|
-| [F67.1](conditions/F67.1-copium-maximum.md) | *Copium maximum* | — |
-| [F67.2](conditions/F67.2-convulsio-strategica.md) | *Convulsio strategica* | Strategic convulsions |
-| [F67.3](conditions/F67.3-ave-maria.md) | *Ave Maria* | Hail Mary |
-| [F67.4](conditions/F67.4-delirium-incumbentis.md) | *Delirium incumbentis* | — |
+| [F67.1](disorders/F67.1-copium-maximum.md) | *Copium maximum* | — |
+| [F67.2](disorders/F67.2-convulsio-strategica.md) | *Convulsio strategica* | Strategic convulsions |
+| [F67.3](disorders/F67.3-ave-maria.md) | *Ave Maria* | Hail Mary |
+| [F67.4](disorders/F67.4-delirium-incumbentis.md) | *Delirium incumbentis* | — |
 
-Codes follow the clinical convention: the category (F67), the condition (F67.3) and, where a coding note applies, a final digit set by the specifier (F67.30, commercial type). Each entry gives diagnostic criteria, specifiers, recording procedures, features, prevalence, course, risk factors, differential diagnosis and comorbidity. Each condition has its own file in [`conditions/`](conditions/) and its own card in [`cards/`](cards/).
+Codes follow the clinical convention: the category (F67), the disorder (F67.3) and, where a coding note applies, a final digit set by the specifier (F67.30, commercial type). Each entry gives diagnostic criteria, specifiers, recording procedures, features, prevalence, course, risk factors, differential diagnosis and comorbidity. Each disorder has its own file in [`disorders/`](disorders/) and its own card in [`cards/`](cards/).
 
 ## 2. Cases
 
@@ -32,13 +32,13 @@ Case reports follow the form of a clinical case report, including a mental statu
 Two ways to contribute, both described in [CONTRIBUTING.md](CONTRIBUTING.md):
 
 - **Report a case.** Open an issue with the *Report a case* template, or add a file to `cases/`.
-- **Propose a condition.** Open an issue with the *Propose a condition* template. The editors assign codes.
+- **Propose a disorder.** Open an issue with the *Propose a disorder* template. The editors assign codes.
 
 ## 4. Forks and local editions
 
 Fork freely. Two conventions keep editions compatible with this one:
 
-- **Extensions use `.8`.** Conditions you add under an existing category take codes ending in `.8` (“other specified”), e.g. `F67.8x`. They will not collide with codes assigned here, and good ones can be brought back.
+- **Extensions use `.8`.** Disorders you add under an existing category take codes ending in `.8` (“other specified”), e.g. `F67.8x`. They will not collide with codes assigned here, and good ones can be brought back.
 - **New chapters take a new letter.** An edition for another kind of patient (venture firms, media companies, governments) opens its own chapter rather than renumbering F67.
 
 ## 5. License

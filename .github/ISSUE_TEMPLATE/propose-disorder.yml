@@ -1,7 +1,7 @@
-name: Propose a condition
-description: Propose a new condition for the manual.
-title: "Condition: "
-labels: [condition]
+name: Propose a disorder
+description: Propose a new disorder for the manual.
+title: "Disorder: "
+labels: [disorder]
 body:
   - type: input
     id: name
@@ -33,7 +33,7 @@ body:
     id: differential
     attributes:
       label: Differential diagnosis
-      description: Conditions and ordinary business behavior this could be mistaken for, and how to tell them apart.
+      description: Disorders and ordinary business behavior this could be mistaken for, and how to tell them apart.
     validations:
       required: true
   - type: textarea

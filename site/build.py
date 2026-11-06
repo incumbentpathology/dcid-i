@@ -4,7 +4,7 @@
     pip install markdown
     python3 site/build.py            # writes _site/
 
-The site is generated; edit conditions/, cases/ and CONTRIBUTING.md instead.
+The site is generated; edit disorders/, cases/ and CONTRIBUTING.md instead.
 """
 
 import html
@@ -54,9 +54,9 @@ def strip_md(s):
     return re.sub(r"[*_`]", "", s)
 
 
-def load_conditions():
+def load_disorders():
     out = []
-    for p in (ROOT / "conditions").glob("*.md"):
+    for p in (ROOT / "disorders").glob("*.md"):
         meta, body = split_frontmatter(p.read_text())
         body = re.sub(r"^\s*# .*\n", "", body, count=1)
         body = re.sub(r"^\s*\*Common name:\*.*\n", "", body, count=1)
@@ -103,11 +103,11 @@ def md(text, links):
     return re.sub(r"\b(F\d{2}(?:\.\d+)?)\b(?![^<]*>)", r'<span class="code-ref">\1</span>', out)
 
 
-def page(title, body, path, conditions, here=None, description=DESCRIPTION, image="/cards/dcid-i.png", art=False):
+def page(title, body, path, disorders, here=None, description=DESCRIPTION, image="/cards/dcid-i.png", art=False):
     full = TITLE if title == TITLE else f"{title} · {TITLE}"
     url = DOMAIN + path
     rail = "".join(
-        f'<a href="{c["url"]}"{" class=here" if c["code"] == here else ""}>{c["code"]}</a>' for c in conditions
+        f'<a href="{c["url"]}"{" class=here" if c["code"] == here else ""}>{c["code"]}</a>' for c in disorders
     )
     script = '<script src="/art.js" defer></script>' if art else ""
     return f"""<!DOCTYPE html>
@@ -135,7 +135,7 @@ def page(title, body, path, conditions, here=None, description=DESCRIPTION, imag
 {script}
 </head>
 <body>
-<nav class="rail" aria-label="Conditions"><a href="/"{" class=here" if here == "home" else ""}>F67</a>{rail}<hr><a href="/cases/">Cases</a><a href="/lookup/">Lookup</a></nav>
+<nav class="rail" aria-label="Disorders"><a href="/"{" class=here" if here == "home" else ""}>F67</a>{rail}<hr><a href="/cases/">Cases</a><a href="/lookup/">Lookup</a></nav>
 <main>
 {body}
 </main>
@@ -172,21 +172,21 @@ def build():
     shutil.copytree(ROOT / "cards", OUT / "cards")
     (OUT / "CNAME").write_text("incumbentpathology.org\n")
 
-    conditions, cases = load_conditions(), load_cases()
-    links = {c["file"]: c["url"] for c in conditions}
+    disorders, cases = load_disorders(), load_cases()
+    links = {c["file"]: c["url"] for c in disorders}
     links.update({c["file"]: c["url"] for c in cases})
     links.update({"CONTRIBUTING.md": "/contribute/", "README.md": "/", "_template.md": f"{REPO}/blob/master/cases/_template.md"})
     cited = {}
     for k in cases:
         for f in k["findings"]:
             cited.setdefault(f[:5], []).append(k)
-    P = lambda *a, **kw: page(*a, conditions=conditions, **kw)
+    P = lambda *a, **kw: page(*a, disorders=disorders, **kw)
 
     # Title page and contents
     toc = "".join(
         f'<a href="{c["url"]}"><span class="mono">{c["code"]}</span><span class="latin">{html.escape(c["name"])}</span>'
         + (f'<span class="common">{html.escape(c["common"])}</span>' if c["common"] else "") + "</a>"
-        for c in conditions
+        for c in disorders
     )
     home = f"""
 <section class="cover">
@@ -202,10 +202,10 @@ def build():
 </section>"""
     write("/", P(TITLE, home, "/", here="home", art=True))
 
-    # Conditions
-    for i, c in enumerate(conditions):
-        prev_c = conditions[i - 1] if i else None
-        next_c = conditions[i + 1] if i + 1 < len(conditions) else None
+    # Disorders
+    for i, c in enumerate(disorders):
+        prev_c = disorders[i - 1] if i else None
+        next_c = disorders[i + 1] if i + 1 < len(disorders) else None
         listed = "".join(f'<li><a href="{k["url"]}">{html.escape(k["title"])}</a></li>' for k in cited.get(c["code"], []))
         cases_html = f'<section class="cited"><h2>In the casebook</h2><ul>{listed}</ul></section>' if listed else ""
         link = lambda x, arrow_left: (
@@ -249,9 +249,9 @@ def build():
 <div class="prose">
 <p><em>{TITLE}</em> is the first edition of the {SUBTITLE} ({MANUAL}), issued by the {INSTITUTE} (ISIP).</p>
 <h2>Codes</h2>
-<p>Codes follow the clinical convention: the category (F67), the condition (F67.3) and, where a coding note applies, a final digit set by the specifier (F67.30, commercial type).</p>
+<p>Codes follow the clinical convention: the category (F67), the disorder (F67.3) and, where a coding note applies, a final digit set by the specifier (F67.30, commercial type).</p>
 <h2>Forks and local editions</h2>
-<p>Fork freely. Conditions added under an existing category take codes ending in <code>.8</code> (“other specified”), e.g. <code>F67.8x</code>, so they do not collide with codes assigned here. An edition for another kind of patient opens its own chapter rather than renumbering F67.</p>
+<p>Fork freely. Disorders added under an existing category take codes ending in <code>.8</code> (“other specified”), e.g. <code>F67.8x</code>, so they do not collide with codes assigned here. An edition for another kind of patient opens its own chapter rather than renumbering F67.</p>
 <h2>License</h2>
 <p>Text and cards are licensed <a href="{REPO}/blob/master/LICENSE">CC BY 4.0</a>. Reuse, adapt and fork, with attribution to <em>{TITLE} ({MANUAL})</em> and a link to incumbentpathology.org. Source: <a href="{REPO}">{REPO.replace("https://", "")}</a>.</p>
 <h2>Notice</h2>
@@ -261,7 +261,7 @@ def build():
 
     # Code lookup
     index = {CATEGORY[0]: {"url": "/", "label": CATEGORY[1]}}
-    for c in conditions:
+    for c in disorders:
         index[c["code"]] = {"url": c["url"], "label": c["name"]}
         for sub, label in c["subcodes"]:
             index[sub] = {"url": c["url"], "label": f'{c["name"]}, {label.strip().lower()}'}
@@ -285,7 +285,7 @@ document.getElementById("all").innerHTML = Object.entries(CODES).sort().map(([k,
 
     write("/404.html", P("Not classified", f'<section class="cover">{head("", "Not classified", None, "No entry exists at this address")}<canvas class="art" data-art="delirium" aria-hidden="true"></canvas><p class="credits"><a href="/">Return to the classification</a></p></section>', "/404.html", art=True))
 
-    print(f"built {len(conditions)} conditions, {len(cases)} cases -> {OUT.relative_to(ROOT)}/")
+    print(f"built {len(disorders)} disorders, {len(cases)} cases -> {OUT.relative_to(ROOT)}/")
 
 
 if __name__ == "__main__":
