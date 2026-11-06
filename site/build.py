@@ -255,7 +255,7 @@ def build():
 <h2>License</h2>
 <p>Text and cards are licensed <a href="{REPO}/blob/master/LICENSE">CC BY 4.0</a>. Reuse, adapt and fork, with attribution to <em>{TITLE} ({MANUAL})</em> and a link to incumbentpathology.org. Source: <a href="{REPO}">{REPO.replace("https://", "")}</a>.</p>
 <h2>Notice</h2>
-<p><em>{TITLE}</em> is a parody of clinical diagnostic manuals, and the {INSTITUTE} is fictional. The manual diagnoses companies, not people, and is not affiliated with any medical or psychiatric organization.</p>
+<p><em>{TITLE}</em> is a parody of clinical diagnostic manuals, and the {INSTITUTE} is fictional. The manual diagnoses companies, not people, and is not affiliated with any medical or psychiatric organization. Any resemblance to a company you have been watching is a matter for your own judgment.</p>
 </div></article>"""
     write("/about/", P("About", about, "/about/"))
 

@@ -4,7 +4,7 @@
 
 *Institute for the Study of Incumbent Pathologies*
 
-A clinical reference for the early signs of incumbent distress. Any resemblance to a company you have been watching is a matter for your own judgment.
+A clinical reference for the early signs of incumbent distress.
 
 Consult the manual at [incumbentpathology.org](https://incumbentpathology.org).
 
@@ -47,4 +47,4 @@ Text and cards: [CC BY 4.0](LICENSE). Reuse, adapt and fork, with attribution to
 
 ---
 
-*Pathologies of Incumbency* is a parody of clinical diagnostic manuals. The Institute for the Study of Incumbent Pathologies is fictional. The manual diagnoses companies, not people, and is not affiliated with any medical or psychiatric organization.
+*Pathologies of Incumbency* is a parody of clinical diagnostic manuals. The Institute for the Study of Incumbent Pathologies is fictional. The manual diagnoses companies, not people, and is not affiliated with any medical or psychiatric organization. Any resemblance to a company you have been watching is a matter for your own judgment.
