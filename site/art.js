@@ -56,6 +56,28 @@
       ctx.fillStyle = INK; ctx.beginPath(); ctx.arc(x, y, 3.4, 0, Math.PI * 2); ctx.fill();
     },
 
+    // F61.1 Crisis identitatis: one outline, never settling on a shape.
+    identitas(ctx, s, t) {
+      const c = s / 2, R = s * 0.27, n = 240;
+      const shapes = [3, 4, 0, 6];
+      const k = (t / 3200) % shapes.length, i = Math.floor(k), f = k - i;
+      const e = f < 0.6 ? 0 : (1 - Math.cos(Math.PI * (f - 0.6) / 0.4)) / 2;
+      const radius = (sides, a) => {
+        if (!sides) return R;
+        const seg = (2 * Math.PI) / sides, x = ((a + Math.PI / 2) % seg + seg) % seg - seg / 2;
+        return (R * Math.cos(Math.PI / sides)) / Math.cos(x);
+      };
+      ctx.strokeStyle = INK; ctx.lineWidth = 1.4; ctx.beginPath();
+      for (let j = 0; j <= n; j++) {
+        const a = (j / n) * Math.PI * 2;
+        const r = radius(shapes[i], a) * (1 - e) + radius(shapes[(i + 1) % shapes.length], a) * e;
+        const x = c + Math.cos(a) * r, y = c + Math.sin(a) * r;
+        j ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+      }
+      ctx.stroke();
+      ctx.strokeStyle = FAINT; ctx.beginPath(); ctx.arc(c, c, R * 1.35, 0, Math.PI * 2); ctx.stroke();
+    },
+
     // F60.2 Delirium incumbentis: two positions held at once, neither centered.
     delirium(ctx, s, t) {
       const c = s / 2, r = s * 0.24;

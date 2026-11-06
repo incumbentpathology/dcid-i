@@ -16,7 +16,7 @@ Consult the manual at [incumbentpathology.org](https://incumbentpathology.org).
 | [F60.1](disorders/F60-copium-spectrum-and-other-delusional-disorders/F60.1-copium-maximum.md) | *Copium maximum* | — |
 | [F60.2](disorders/F60-copium-spectrum-and-other-delusional-disorders/F60.2-delirium-incumbentis.md) | *Delirium incumbentis* | — |
 | [**F61**](disorders/F61-dissociative-and-identity-disorders/) | **Dissociative and Identity Disorders** | |
-| | *Open for proposals* | |
+| [F61.1](disorders/F61-dissociative-and-identity-disorders/F61.1-crisis-identitatis.md) | *Crisis identitatis* | Identity crisis |
 | [**F62**](disorders/F62-disruption-and-impulse-control-disorders/) | **Disruption and Impulse-Control Disorders** | |
 | [F62.1](disorders/F62-disruption-and-impulse-control-disorders/F62.1-convulsio-strategica.md) | *Convulsio strategica* | Strategic convulsions |
 | [F62.2](disorders/F62-disruption-and-impulse-control-disorders/F62.2-ave-maria.md) | *Ave Maria* | Hail Mary |

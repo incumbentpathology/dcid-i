@@ -26,7 +26,7 @@ SUBTITLE = "Diagnostic Criteria for Incumbent Disorders"
 MANUAL = "DCID-I"
 INSTITUTE = "Institute for the Study of Incumbent Pathologies"
 DESCRIPTION = "Diagnostic Criteria for Incumbent Disorders, First Edition. A clinical reference for the early signs of incumbent distress."
-ART = {"F60.1": "copium", "F62.1": "convulsio", "F62.2": "ave", "F60.2": "delirium"}
+ART = {"F61.1": "identitas", "F60.1": "copium", "F62.1": "convulsio", "F62.2": "ave", "F60.2": "delirium"}
 FONTS = "https://fonts.googleapis.com/css2?family=Courier+Prime&family=Sorts+Mill+Goudy:ital@0;1&display=swap"
 
 
