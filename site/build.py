@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SITE = Path(__file__).resolve().parent
 OUT = ROOT / "_site"
 DOMAIN = "https://incumbentpathology.org"
-REPO = "https://github.com/dremnik/dcid-i"
+REPO = "https://github.com/incumbentpathology/dcid-i"
 
 TITLE = "Pathologies of Incumbency"
 SUBTITLE = "Diagnostic Criteria for Incumbent Disorders"
