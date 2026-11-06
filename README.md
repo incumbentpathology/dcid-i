@@ -12,8 +12,7 @@ A clinical reference for the signs of distress in an incumbent company. All find
 2. [Cases](#2-cases)
 3. [Contributing](#3-contributing)
 4. [Forks and local editions](#4-forks-and-local-editions)
-5. [Cards](#5-cards)
-6. [License](#6-license)
+5. [License](#5-license)
 
 ## 1. Classification
 
@@ -48,10 +47,6 @@ Fork freely. Two conventions keep editions compatible with this one:
 - **Extensions use `.8`.** Conditions you add under an existing category take codes ending in `.8` (“other specified”), e.g. `R67.8x`. They will not collide with codes assigned here, and good ones can be brought back.
 - **New chapters take a new letter.** An edition for another kind of patient (venture firms, media companies, governments) opens its own chapter rather than renumbering R67.
 
-## 5. Cards
+## 5. License
 
-`python3 render/render.py` renders `cards/dsm-i.png` and one card per condition from the files in `conditions/`. It needs Google Chrome or Chromium; set `CHROME` to its path if it is not found.
-
-## 6. License
-
-Text and cards: [CC BY 4.0](LICENSE). Reuse, adapt and fork, with attribution to *Pathologies of Incumbency (DSM-I)* and a link to this repository. The renderer in `render/`: [MIT](render/LICENSE).
+Text and cards: [CC BY 4.0](LICENSE). Reuse, adapt and fork, with attribution to *Pathologies of Incumbency (DSM-I)* and a link to this repository.
