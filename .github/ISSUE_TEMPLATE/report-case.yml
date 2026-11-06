@@ -1,0 +1,39 @@
+name: Report a case
+description: Record an observed sign in an incumbent patient.
+title: "Case: "
+labels: [case]
+body:
+  - type: markdown
+    attributes:
+      value: "Record the patient by type, never by name. Submissions that name a company will be closed."
+  - type: input
+    id: patient
+    attributes:
+      label: Patient
+      placeholder: "an issue-tracker incumbent"
+    validations:
+      required: true
+  - type: input
+    id: findings
+    attributes:
+      label: Finding codes
+      placeholder: "R67.1, R67.4"
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Date observed
+      placeholder: "2026-11"
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed
+      description: What the patient said or did, paraphrased.
+    validations:
+      required: true
+  - type: textarea
+    id: inference
+    attributes:
+      label: Inference
+      description: The doctor’s interpretation.

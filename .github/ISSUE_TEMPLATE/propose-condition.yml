@@ -1,0 +1,31 @@
+name: Propose a condition
+description: Propose a new condition for the manual.
+title: "Condition: "
+labels: [condition]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: "Copium magnificum"
+    validations:
+      required: true
+  - type: textarea
+    id: sign
+    attributes:
+      label: Sign or working definition
+      description: One plain sentence.
+    validations:
+      required: true
+  - type: textarea
+    id: case
+    attributes:
+      label: Case note
+      description: At least one illustrative case, patient recorded by type.
+    validations:
+      required: true
+  - type: input
+    id: related
+    attributes:
+      label: Related findings
+      placeholder: "R67.4"
