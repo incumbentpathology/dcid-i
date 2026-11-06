@@ -2,14 +2,14 @@
 title: "Six weeks of cash"
 date_observed: 2026-11
 reported: 2026-11
-findings: [R67.3, R67.1]
+findings: [F67.30, F67.1]
 specifiers: [commercial type, runway 6 weeks, insight unknown]
 physician: dcid-i editors
 ---
 
 # Six weeks of cash
 
-**Findings:** R67.3 · Ave Maria, commercial type, runway 6 weeks. R67.1 · Copium maximum, insight unknown.
+**Findings:** F67.30 · Ave Maria, commercial type, runway 6 weeks. F67.1 · Copium maximum, severity not assessed, insight unknown.
 
 ## 1. Patient Information
 
@@ -55,9 +55,9 @@ One rebrand and one reorganization in the past eighteen months. An assistant was
 
 ## 7. Diagnostic Assessment
 
-**R67.3 · Ave Maria.** Criterion A met: the sales team and the remaining cash are committed to one customer. Criterion B met: six weeks is shorter than a typical enterprise procurement cycle. Criterion C met: patient declined to discuss an alternative. Criterion D met: patient described the deal as “a matter of conviction.”
+**F67.3 · Ave Maria.** Criterion A met: the sales team and the remaining cash are committed to one customer. Criterion B met: six weeks is shorter than a typical enterprise procurement cycle. Criterion C met: patient declined to discuss an alternative. Criterion D met: patient described the deal as “a matter of conviction.”
 
-**R67.1 · Copium maximum.** Criteria A3 and A6 met. Insight cannot be assigned from the consultation alone.
+**F67.1 · Copium maximum.** Criteria A3 and A6 met. Insight cannot be assigned from the consultation alone.
 
 **Differential.** Focus excluded: the patient cannot survive failure. Strategic convulsions excluded: resources are concentrated, not dispersed.
 

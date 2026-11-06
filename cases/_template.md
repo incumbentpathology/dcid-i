@@ -2,14 +2,14 @@
 title: "<Short descriptive title>"
 date_observed: YYYY-MM
 reported: YYYY-MM
-findings: [R67.x]
+findings: [F67.x]
 specifiers: []
 physician: <your handle>
 ---
 
 # <Short descriptive title>
 
-**Findings:** R67.x · <Condition>, <specifiers>
+**Findings:** F67.x · <Condition>, <specifiers>
 
 ## 1. Patient Information
 
@@ -31,7 +31,7 @@ What led up to the presentation. When the challenger first appeared in the patie
 
 ## 4. Past History
 
-Prior pivots, rebrands, acquisitions and reorganizations. Prior episodes of any R67 condition.
+Prior pivots, rebrands, acquisitions and reorganizations. Prior episodes of any F67 condition.
 
 ## 5. Timeline
 

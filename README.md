@@ -16,16 +16,16 @@ A clinical reference for the signs of incumbent distress. Any resemblance to a c
 
 ## 1. Classification
 
-R67 · Signs of incumbent distress.
+F67 · Signs of incumbent distress.
 
 | Code | Condition | Common name |
 |---|---|---|
-| [R67.1](conditions/R67.1-copium-maximum.md) | *Copium maximum* | — |
-| [R67.2](conditions/R67.2-convulsio-strategica.md) | *Convulsio strategica* | Strategic convulsions |
-| [R67.3](conditions/R67.3-ave-maria.md) | *Ave Maria* | Hail Mary |
-| [R67.4](conditions/R67.4-delirium-incumbentis.md) | *Delirium incumbentis* | — |
+| [F67.1](conditions/F67.1-copium-maximum.md) | *Copium maximum* | — |
+| [F67.2](conditions/F67.2-convulsio-strategica.md) | *Convulsio strategica* | Strategic convulsions |
+| [F67.3](conditions/F67.3-ave-maria.md) | *Ave Maria* | Hail Mary |
+| [F67.4](conditions/F67.4-delirium-incumbentis.md) | *Delirium incumbentis* | — |
 
-Each entry gives diagnostic criteria, specifiers, recording procedures, features, prevalence, course, risk factors, differential diagnosis and comorbidity. Each condition has its own file in [`conditions/`](conditions/) and its own card in [`cards/`](cards/).
+Codes follow the clinical convention: the category (F67), the condition (F67.3) and, where a coding note applies, a final digit set by the specifier (F67.30, commercial type). Each entry gives diagnostic criteria, specifiers, recording procedures, features, prevalence, course, risk factors, differential diagnosis and comorbidity. Each condition has its own file in [`conditions/`](conditions/) and its own card in [`cards/`](cards/).
 
 ## 2. Cases
 
@@ -44,8 +44,8 @@ Two ways to contribute, both described in [CONTRIBUTING.md](CONTRIBUTING.md):
 
 Fork freely. Two conventions keep editions compatible with this one:
 
-- **Extensions use `.8`.** Conditions you add under an existing category take codes ending in `.8` (“other specified”), e.g. `R67.8x`. They will not collide with codes assigned here, and good ones can be brought back.
-- **New chapters take a new letter.** An edition for another kind of patient (venture firms, media companies, governments) opens its own chapter rather than renumbering R67.
+- **Extensions use `.8`.** Conditions you add under an existing category take codes ending in `.8` (“other specified”), e.g. `F67.8x`. They will not collide with codes assigned here, and good ones can be brought back.
+- **New chapters take a new letter.** An edition for another kind of patient (venture firms, media companies, governments) opens its own chapter rather than renumbering F67.
 
 ## 5. License
 

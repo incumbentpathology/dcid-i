@@ -14,7 +14,7 @@ Every finding code you assign must name the criteria it meets and the evidence f
 
 ## 3. Proposing a condition
 
-A condition follows the structure of the existing entries: diagnostic criteria, specifiers, recording procedures, diagnostic and associated features, prevalence, development and course, risk and prognostic factors, differential diagnosis and comorbidity. A proposal needs at least the criteria, the differential diagnosis and one case. Open a *Propose a condition* issue. The editors assign codes in R67; please do not pick your own outside `.8` (see the README on forks).
+A condition follows the structure of the existing entries: diagnostic criteria, specifiers, recording procedures, diagnostic and associated features, prevalence, development and course, risk and prognostic factors, differential diagnosis and comorbidity. A proposal needs at least the criteria, the differential diagnosis and one case. Open a *Propose a condition* issue. The editors assign codes in F67; please do not pick your own outside `.8` (see the README on forks).
 
 ## 4. Register
 
