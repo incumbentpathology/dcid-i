@@ -1,8 +1,8 @@
 # Pathologies of Incumbency
 
-**DSM-I · Diagnostic and Statistical Manual of Incumbent Disorders, First Edition**
+**DCID-I · Diagnostic Criteria for Incumbent Disorders, First Edition**
 
-![Pathologies of Incumbency](cards/dsm-i.png)
+![Pathologies of Incumbency](cards/dcid-i.png)
 
 A clinical reference for the signs of incumbent distress. Any resemblance to a company you have been watching is a matter for your own judgment.
 
@@ -49,8 +49,8 @@ Fork freely. Two conventions keep editions compatible with this one:
 
 ## 5. License
 
-Text and cards: [CC BY 4.0](LICENSE). Reuse, adapt and fork, with attribution to *Pathologies of Incumbency (DSM-I)* and a link to this repository.
+Text and cards: [CC BY 4.0](LICENSE). Reuse, adapt and fork, with attribution to *Pathologies of Incumbency (DCID-I)* and a link to this repository.
 
 ---
 
-*Pathologies of Incumbency* is a parody of the *Diagnostic and Statistical Manual of Mental Disorders*. It is not affiliated with or endorsed by the American Psychiatric Association, and it diagnoses companies, not people.
+*Pathologies of Incumbency* is a parody of clinical diagnostic manuals. It diagnoses companies, not people, and is not affiliated with any medical or psychiatric organization.

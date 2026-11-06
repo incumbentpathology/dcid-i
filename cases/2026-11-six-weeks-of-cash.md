@@ -4,7 +4,7 @@ date_observed: 2026-11
 reported: 2026-11
 findings: [R67.3, R67.1]
 specifiers: [commercial type, runway 6 weeks, insight unknown]
-physician: dsm-i editors
+physician: dcid-i editors
 ---
 
 # Six weeks of cash
