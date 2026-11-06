@@ -4,9 +4,9 @@
 
 *Institute for the Study of Incumbent Pathologies*
 
-![Pathologies of Incumbency](cards/dcid-i.png)
-
 A clinical reference for the early signs of incumbent distress. Any resemblance to a company you have been watching is a matter for your own judgment.
+
+Consult the manual at [incumbentpathology.org](https://incumbentpathology.org).
 
 ## 1. Classification
 
