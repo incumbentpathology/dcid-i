@@ -8,14 +8,6 @@
 
 A clinical reference for the early signs of incumbent distress. Any resemblance to a company you have been watching is a matter for your own judgment.
 
-## Contents
-
-1. [Classification](#1-classification)
-2. [Cases](#2-cases)
-3. [Contributing](#3-contributing)
-4. [Forks and local editions](#4-forks-and-local-editions)
-5. [License](#5-license)
-
 ## 1. Classification
 
 F67 · Early signs of incumbent distress.
