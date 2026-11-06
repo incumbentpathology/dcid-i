@@ -16,7 +16,7 @@ A clinical reference for the early signs of incumbent distress. Any resemblance 
 
 ## 1. Classification
 
-F67 · Early early signs of incumbent distress.
+F67 · Early signs of incumbent distress.
 
 | Code | Condition | Common name |
 |---|---|---|
