@@ -4,7 +4,7 @@
   const FAINT = "rgba(31, 30, 29, 0.35)";
 
   const studies = {
-    // F67.1 Copium maximum: a breath that keeps being taken.
+    // F60.1 Copium maximum: a breath that keeps being taken.
     copium(ctx, s, t) {
       const c = s / 2;
       for (let i = 0; i < 5; i++) {
@@ -18,7 +18,7 @@
       ctx.beginPath(); ctx.arc(c, c, 3, 0, Math.PI * 2); ctx.fill();
     },
 
-    // F67.2 Convulsio strategica: each move announced as the direction.
+    // F62.1 Convulsio strategica: each move announced as the direction.
     convulsio(ctx, s, t, st) {
       if (!st.pts) { st.pts = [[s / 2, s / 2]]; st.next = 0; }
       if (t > st.next) {
@@ -37,7 +37,7 @@
       ctx.fillStyle = INK; ctx.beginPath(); ctx.arc(x, y, 3.2, 0, Math.PI * 2); ctx.fill();
     },
 
-    // F67.3 Ave Maria: thrown at the one outcome; arrives short.
+    // F62.2 Ave Maria: thrown at the one outcome; arrives short.
     ave(ctx, s, t) {
       const x0 = s * 0.16, y0 = s * 0.78, tx = s * 0.84, ty = s * 0.78;
       ctx.strokeStyle = FAINT; ctx.lineWidth = 1.2;
@@ -56,7 +56,7 @@
       ctx.fillStyle = INK; ctx.beginPath(); ctx.arc(x, y, 3.4, 0, Math.PI * 2); ctx.fill();
     },
 
-    // F67.4 Delirium incumbentis: two positions held at once, neither centered.
+    // F60.2 Delirium incumbentis: two positions held at once, neither centered.
     delirium(ctx, s, t) {
       const c = s / 2, r = s * 0.24;
       const a = t / 2600, b = t / 3700;

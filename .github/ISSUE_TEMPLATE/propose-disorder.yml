@@ -47,4 +47,4 @@ body:
     id: related
     attributes:
       label: Related findings
-      placeholder: "F67.4"
+      placeholder: "F60.2"

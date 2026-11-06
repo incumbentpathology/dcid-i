@@ -2,14 +2,14 @@
 title: "<Short descriptive title>"
 date_observed: YYYY-MM
 reported: YYYY-MM
-findings: [F67.x]
+findings: [F6x.x]
 specifiers: []
 physician: <your handle>
 ---
 
 # <Short descriptive title>
 
-**Findings:** F67.x · <Disorder>, <specifiers>
+**Findings:** F6x.x · <Disorder>, <specifiers>
 
 ## 1. Patient Information
 
@@ -31,7 +31,7 @@ What led up to the presentation. When the challenger first appeared in the patie
 
 ## 4. Past History
 
-Prior pivots, rebrands, acquisitions and reorganizations. Prior episodes of any F67 disorder.
+Prior pivots, rebrands, acquisitions and reorganizations. Prior episodes of any disorder in this manual.
 
 ## 5. Timeline
 

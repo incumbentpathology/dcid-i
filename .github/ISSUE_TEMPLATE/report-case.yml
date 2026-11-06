@@ -11,7 +11,7 @@ body:
     attributes:
       label: Findings
       description: Codes and specifiers.
-      placeholder: "F67.30 Ave Maria, commercial type, runway 6 weeks"
+      placeholder: "F62.20 Ave Maria, commercial type, runway 6 weeks"
     validations:
       required: true
   - type: textarea

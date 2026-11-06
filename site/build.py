@@ -25,9 +25,8 @@ TITLE = "Pathologies of Incumbency"
 SUBTITLE = "Diagnostic Criteria for Incumbent Disorders"
 MANUAL = "DCID-I"
 INSTITUTE = "Institute for the Study of Incumbent Pathologies"
-CATEGORY = ("F67", "Early signs of incumbent distress")
 DESCRIPTION = "Diagnostic Criteria for Incumbent Disorders, First Edition. A clinical reference for the early signs of incumbent distress."
-ART = {"F67.1": "copium", "F67.2": "convulsio", "F67.3": "ave", "F67.4": "delirium"}
+ART = {"F60.1": "copium", "F62.1": "convulsio", "F62.2": "ave", "F60.2": "delirium"}
 FONTS = "https://fonts.googleapis.com/css2?family=Courier+Prime&family=Sorts+Mill+Goudy:ital@0;1&display=swap"
 
 
@@ -54,16 +53,26 @@ def strip_md(s):
     return re.sub(r"[*_`]", "", s)
 
 
+def load_categories():
+    out = []
+    for p in (ROOT / "disorders").glob("*/README.md"):
+        meta, body = split_frontmatter(p.read_text())
+        out.append({"code": meta["code"], "name": meta["name"], "dir": p.parent.name})
+    return sorted(out, key=lambda c: code_key(c["code"]))
+
+
 def load_disorders():
     out = []
-    for p in (ROOT / "disorders").glob("*.md"):
+    for p in (ROOT / "disorders").glob("*/*.md"):
+        if p.name == "README.md":
+            continue
         meta, body = split_frontmatter(p.read_text())
         body = re.sub(r"^\s*# .*\n", "", body, count=1)
         body = re.sub(r"^\s*\*Common name:\*.*\n", "", body, count=1)
         features = re.search(r"## \d+\. Diagnostic Features\n\n(.+?)\n", body)
         out.append({
             "code": meta["code"], "name": meta["name"], "common": meta.get("common_name"),
-            "file": p.name, "url": f"/{meta['code']}/", "body": body,
+            "file": p.name, "url": f"/{meta['code']}/", "body": body, "cat": meta["code"].split(".")[0],
             "subcodes": re.findall(r"\*\*(F\d+\.\d{2,}) ([^:*]+?):?\*\*", body),
             "summary": strip_md(features.group(1)) if features else "",
         })
@@ -135,7 +144,7 @@ def page(title, body, path, disorders, here=None, description=DESCRIPTION, image
 {script}
 </head>
 <body>
-<nav class="rail" aria-label="Disorders"><a href="/"{" class=here" if here == "home" else ""}>F67</a>{rail}<hr><a href="/cases/">Cases</a><a href="/lookup/">Lookup</a></nav>
+<nav class="rail" aria-label="Disorders"><a href="/"{" class=here" if here == "home" else ""}>Index</a>{rail}<hr><a href="/cases/">Cases</a><a href="/lookup/">Lookup</a></nav>
 <main>
 {body}
 </main>
@@ -172,9 +181,11 @@ def build():
     shutil.copytree(ROOT / "cards", OUT / "cards")
     (OUT / "CNAME").write_text("incumbentpathology.org\n")
 
-    disorders, cases = load_disorders(), load_cases()
+    categories, disorders, cases = load_categories(), load_disorders(), load_cases()
+    catname = {k["code"]: k["name"] for k in categories}
     links = {c["file"]: c["url"] for c in disorders}
     links.update({c["file"]: c["url"] for c in cases})
+    links.update({k["dir"]: f'/#{k["code"]}' for k in categories})
     links.update({"CONTRIBUTING.md": "/contribute/", "README.md": "/", "_template.md": f"{REPO}/blob/master/cases/_template.md"})
     cited = {}
     for k in cases:
@@ -183,10 +194,13 @@ def build():
     P = lambda *a, **kw: page(*a, disorders=disorders, **kw)
 
     # Title page and contents
-    toc = "".join(
+    entry = lambda c: (
         f'<a href="{c["url"]}"><span class="mono">{c["code"]}</span><span class="latin">{html.escape(c["name"])}</span>'
-        + (f'<span class="common">{html.escape(c["common"])}</span>' if c["common"] else "") + "</a>"
-        for c in disorders
+        + (f'<span class="common">{html.escape(c["common"])}</span>' if c["common"] else "") + "</a>")
+    toc = "".join(
+        f'<p class="category" id="{k["code"]}"><span class="mono">{k["code"]}</span>{html.escape(k["name"])}</p>'
+        + '<div class="toc">' + ("".join(entry(c) for c in disorders if c["cat"] == k["code"]) or '<p class="reserved">Open for proposals</p>') + "</div>"
+        for k in categories
     )
     home = f"""
 <section class="cover">
@@ -196,9 +210,8 @@ def build():
   <p class="credits"><img class="seal" src="/seal.png" alt="Seal of the {INSTITUTE}"><br>{INSTITUTE}<br>First Edition · For clinical use</p>
 </section>
 <section class="contents">
-  <p class="category"><span class="mono">{CATEGORY[0]}</span>{CATEGORY[1]}</p>
-  <div class="toc">{toc}</div>
-  <p class="reserved"><span class="mono">F68–F69</span> &nbsp;Reserved</p>
+  {toc}
+  <p class="reserved">Further categories are open for proposals. See <a href="/contribute/">Contribute</a>.</p>
 </section>"""
     write("/", P(TITLE, home, "/", here="home", art=True))
 
@@ -214,7 +227,7 @@ def build():
         body = f"""
 <article>
   <canvas class="art" data-art="{ART.get(c["code"], "copium")}" aria-hidden="true"></canvas>
-  {head(c["code"], c["name"], c["common"], f'{CATEGORY[0]} · {CATEGORY[1]}')}
+  {head(c["code"], c["name"], c["common"], f'<a href="/#{c["cat"]}">{c["cat"]} · {html.escape(catname.get(c["cat"], ""))}</a>')}
   <div class="prose">{md(c["body"], links)}</div>
   {cases_html}
   <nav class="pager">{link(prev_c, True)}{link(next_c, False)}</nav>
@@ -249,9 +262,9 @@ def build():
 <div class="prose">
 <p><em>{TITLE}</em> is the first edition of the {SUBTITLE} ({MANUAL}), issued by the {INSTITUTE} (ISIP).</p>
 <h2>Codes</h2>
-<p>Codes follow the clinical convention: the category (F67), the disorder (F67.3) and, where a coding note applies, a final digit set by the specifier (F67.30, commercial type).</p>
+<p>Codes follow the clinical convention: the category (F62), the disorder (F62.2) and, where a coding note applies, a final digit set by the specifier (F62.20, commercial type).</p>
 <h2>Forks and local editions</h2>
-<p>Fork freely. Disorders added under an existing category take codes ending in <code>.8</code> (“other specified”), e.g. <code>F67.8x</code>, so they do not collide with codes assigned here. An edition for another kind of patient opens its own chapter rather than renumbering F67.</p>
+<p>Fork freely. Disorders added under an existing category take codes ending in <code>.8</code> (“other specified”), e.g. <code>F60.8x</code>, so they do not collide with codes assigned here. An edition for another kind of patient opens its own chapter rather than renumbering this one.</p>
 <h2>License</h2>
 <p>Text and cards are licensed <a href="{REPO}/blob/master/LICENSE">CC BY 4.0</a>. Reuse, adapt and fork, with attribution to <em>{TITLE} ({MANUAL})</em> and a link to incumbentpathology.org. Source: <a href="{REPO}">{REPO.replace("https://", "")}</a>.</p>
 <h2>Notice</h2>
@@ -260,14 +273,14 @@ def build():
     write("/about/", P("About", about, "/about/"))
 
     # Code lookup
-    index = {CATEGORY[0]: {"url": "/", "label": CATEGORY[1]}}
+    index = {k["code"]: {"url": f'/#{k["code"]}', "label": k["name"]} for k in categories}
     for c in disorders:
         index[c["code"]] = {"url": c["url"], "label": c["name"]}
         for sub, label in c["subcodes"]:
             index[sub] = {"url": c["url"], "label": f'{c["name"]}, {label.strip().lower()}'}
     lookup = f"""
 {head("", "Code lookup", None, "Enter a code")}
-<form class="lookup" onsubmit="go(event)"><input id="q" autocomplete="off" placeholder="F67.30" aria-label="Code"><button>Consult</button></form>
+<form class="lookup" onsubmit="go(event)"><input id="q" autocomplete="off" placeholder="F62.20" aria-label="Code"><button>Consult</button></form>
 <p id="result" class="result"></p>
 <section class="contents"><div class="toc" id="all"></div></section>
 <script>
