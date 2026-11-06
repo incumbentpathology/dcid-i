@@ -4,7 +4,7 @@
 
 ![Pathologies of Incumbency](cards/dcid-i.png)
 
-A clinical reference for the signs of incumbent distress. Any resemblance to a company you have been watching is a matter for your own judgment.
+A clinical reference for the early signs of incumbent distress. Any resemblance to a company you have been watching is a matter for your own judgment.
 
 ## Contents
 
@@ -16,7 +16,7 @@ A clinical reference for the signs of incumbent distress. Any resemblance to a c
 
 ## 1. Classification
 
-F67 · Signs of incumbent distress.
+F67 · Early early signs of incumbent distress.
 
 | Code | Condition | Common name |
 |---|---|---|
