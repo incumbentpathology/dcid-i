@@ -50,3 +50,7 @@ Fork freely. Two conventions keep editions compatible with this one:
 ## 5. License
 
 Text and cards: [CC BY 4.0](LICENSE). Reuse, adapt and fork, with attribution to *Pathologies of Incumbency (DSM-I)* and a link to this repository.
+
+---
+
+*Pathologies of Incumbency* is a parody of the *Diagnostic and Statistical Manual of Mental Disorders*. It is not affiliated with or endorsed by the American Psychiatric Association, and it diagnoses companies, not people.
