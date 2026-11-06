@@ -11,7 +11,7 @@ body:
     attributes:
       label: Findings
       description: Codes and specifiers.
-      placeholder: "R67.3 Hail Mary, commercial type, runway 6 weeks"
+      placeholder: "R67.3 Ave Maria, commercial type, runway 6 weeks"
     validations:
       required: true
   - type: textarea

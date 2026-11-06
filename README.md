@@ -18,12 +18,12 @@ A clinical reference for the signs of incumbent distress. Any resemblance to a c
 
 R67 · Signs of incumbent distress.
 
-| Code | Condition |
-|---|---|
-| [R67.1](conditions/R67.1-copium-magnificum.md) | Copium magnificum |
-| [R67.2](conditions/R67.2-strategic-convulsions.md) | Strategic convulsions |
-| [R67.3](conditions/R67.3-hail-mary.md) | Hail Mary |
-| [R67.4](conditions/R67.4-delirium.md) | Delirium |
+| Code | Condition | Common name |
+|---|---|---|
+| [R67.1](conditions/R67.1-copium-maximum.md) | *Copium maximum* | — |
+| [R67.2](conditions/R67.2-convulsio-strategica.md) | *Convulsio strategica* | Strategic convulsions |
+| [R67.3](conditions/R67.3-ave-maria.md) | *Ave Maria* | Hail Mary |
+| [R67.4](conditions/R67.4-delirium-incumbentis.md) | *Delirium incumbentis* | — |
 
 Each entry gives diagnostic criteria, specifiers, recording procedures, features, prevalence, course, risk factors, differential diagnosis and comorbidity. Each condition has its own file in [`conditions/`](conditions/) and its own card in [`cards/`](cards/).
 
